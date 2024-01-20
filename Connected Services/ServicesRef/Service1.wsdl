@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar80.fulton.asu.edu/Page0/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar80.fulton.asu.edu/Page0/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_register_InputMessage">
+    <wsdl:part name="parameters" element="tns:register" />
+  </wsdl:message>
+  <wsdl:message name="IService1_register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_HashPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:HashPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_HashPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HashPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifyPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifyPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewRooms_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewRooms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewRooms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewRoomsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModifyRoomQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRoomQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModifyRoomQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRoomQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PromoteToStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:PromoteToStaff" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PromoteToStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PromoteToStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRoomSelection_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoomSelection" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRoomSelection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoomSelectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoomSelection_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoomSelection" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoomSelection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoomSelectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAllRoomSelections_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllRoomSelections" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAllRoomSelections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllRoomSelectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:isStaff" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllRoomBookings_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllRoomBookings" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllRoomBookings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllRoomBookingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllAvailableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/login" message="tns:IService1_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginResponse" message="tns:IService1_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/register" message="tns:IService1_register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerResponse" message="tns:IService1_register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete" message="tns:IService1_delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteResponse" message="tns:IService1_delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HashPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/HashPassword" message="tns:IService1_HashPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/HashPasswordResponse" message="tns:IService1_HashPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerifyPassword" message="tns:IService1_VerifyPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerifyPasswordResponse" message="tns:IService1_VerifyPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRooms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewRooms" message="tns:IService1_AddNewRooms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewRoomsResponse" message="tns:IService1_AddNewRooms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRoomQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModifyRoomQuantity" message="tns:IService1_ModifyRoomQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModifyRoomQuantityResponse" message="tns:IService1_ModifyRoomQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoteToStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PromoteToStaff" message="tns:IService1_PromoteToStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PromoteToStaffResponse" message="tns:IService1_PromoteToStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRoomSelection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddRoomSelection" message="tns:IService1_AddRoomSelection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddRoomSelectionResponse" message="tns:IService1_AddRoomSelection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomSelection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRoomSelection" message="tns:IService1_DeleteRoomSelection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRoomSelectionResponse" message="tns:IService1_DeleteRoomSelection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllRoomSelections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAllRoomSelections" message="tns:IService1_DeleteAllRoomSelections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAllRoomSelectionsResponse" message="tns:IService1_DeleteAllRoomSelections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isStaff" message="tns:IService1_isStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isStaffResponse" message="tns:IService1_isStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoomBookings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllRoomBookings" message="tns:IService1_getAllRoomBookings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllRoomBookingsResponse" message="tns:IService1_getAllRoomBookings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllAvailable" message="tns:IService1_getAllAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllAvailableResponse" message="tns:IService1_getAllAvailable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IService1/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <soap:operation soapAction="http://tempuri.org/IService1/register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HashPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/HashPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/VerifyPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRooms">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewRooms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRoomQuantity">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModifyRoomQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoteToStaff">
+      <soap:operation soapAction="http://tempuri.org/IService1/PromoteToStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRoomSelection">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddRoomSelection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomSelection">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRoomSelection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllRoomSelections">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteAllRoomSelections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isStaff">
+      <soap:operation soapAction="http://tempuri.org/IService1/isStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoomBookings">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllRoomBookings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllAvailable">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar80.fulton.asu.edu/Page0/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
